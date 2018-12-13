@@ -1,6 +1,7 @@
 import Taro, { Component } from '@tarojs/taro';
 import {View,Text,Image} from '@tarojs/components'
 import Top from './top'
+import Activity from './activity'
 import './index.less'
 
 
@@ -26,7 +27,7 @@ class Head extends Component {
         <View className='store'>
           <Image className='store_img' src={require('../../assets/img/store.jpg')} ></Image>
           <View className='store_text'>
-            <Text>{store.title}</Text>
+            <Text className='title'>{store.title}</Text>
             <Text>{store.notice}</Text>
             <View>
               {store.tags.map((item,index)=>{
@@ -35,8 +36,8 @@ class Head extends Component {
             </View>
           </View>
         </View>
-      </View>
-    );
+        <Activity />
+      </View>)
   }
 }
 
