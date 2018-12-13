@@ -1,5 +1,6 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View, Text,Button} from '@tarojs/components'
+import Child from './Child'
 import './index.less'
 
 export default class Index extends Component {
@@ -23,6 +24,7 @@ export default class Index extends Component {
       <View>
         <Button onClick={this.changeName.bind(this)}>改变名字</Button>
         <Text>{this.state.name}</Text>
+        <Child />
       </View>
     )
   }
