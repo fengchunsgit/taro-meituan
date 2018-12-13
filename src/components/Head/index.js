@@ -11,7 +11,7 @@ class Head extends Component {
     this.state={
       store:{
         title:'重庆鸡公煲',
-        notice:'welcome~',
+        notice:'来啦，老弟~',
         tags:['味道好','分量足','不错不错，味道好极了！']
       }
     }
