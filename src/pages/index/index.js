@@ -1,5 +1,5 @@
 import Taro, { Component } from '@tarojs/taro'
-import { View, Text } from '@tarojs/components'
+import { View, Text,Button} from '@tarojs/components'
 import './index.less'
 
 export default class Index extends Component {
@@ -8,20 +8,21 @@ export default class Index extends Component {
     navigationBarTitleText: '首页'
   }
 
-  componentWillMount () { }
+  constructor (props) {
+    super(props)
+    this.state = { name:"lily" }
+  }
 
-  componentDidMount () { }
-
-  componentWillUnmount () { }
-
-  componentDidShow () { }
-
-  componentDidHide () { }
-
+  changeName() {
+    this.setState({
+      name:'lucy'
+    })
+  }
   render () {
     return (
-      <View className='index'>
-        <Text>Hello world!</Text>
+      <View>
+        <Button onClick={this.changeName.bind(this)}>改变名字</Button>
+        <Text>{this.state.name}</Text>
       </View>
     )
   }
